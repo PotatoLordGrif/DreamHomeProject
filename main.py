@@ -13,17 +13,15 @@ def login():
 def register():
     return render_template('register.html')
 
-@app.route('/Bookview')
+@app.route('/BookView')
 def bookview():
     return render_template('bookview.html')
-
-
 
 @app.route('/Rentals')
 def rentals():
     return render_template('Rentals.html')
 
-@app.route('/addtomail')
+@app.route('/AddtoMail')
 def addtomail():
     return render_template('addtomail.html')
 
