@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book View</title>
+	 <link rel="stylesheet" href="style.css">
+<style>
+a{
+color:white;
+background-color:#FF3399;
+padding:5px 15px 5px 15px;
+text-decoration:none;
+border-radius:20px;
+display: block;
+width: 120px;
+}
+</head>
+<body>
+	<h1>Book View</h1>
+	<p>This is the book view page.</p>
+	<form action="/process_bookview" method="POST">
+		<label for="input1">Input 1:</label>
+		<input type="text" id="input1" name="input1"><br><br>
+		<label for="input2">Input 2:</label>
+		<input type="text" id="input2" name="input2"><br><br>
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
