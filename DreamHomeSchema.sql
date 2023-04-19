@@ -57,7 +57,7 @@ CREATE TABLE Client (
   city varchar(255),
   postCode varchar(10),
   email varchar(255),
-  JoinedOn varchar(255),
+  JoinedOn date,
   Region varchar(255),
   preType varchar(255),
   maxRent float,
