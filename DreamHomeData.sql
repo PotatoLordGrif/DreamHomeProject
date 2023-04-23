@@ -44,14 +44,14 @@ INSERT INTO PropertyForRent VALUES
 
 INSERT INTO Viewing VALUES
 -- (2,2,"PA14",'2004-07-01',11,NULL,False),
-(3,7,"PG36",'2004-07-01',12,NULL,False),
-(4,9,"PG4",'2004-07-01',12,"Tidy but too small",False),
--- (5,10,"PA14",'2004-07-02',10,NULL,False),
-(6,12,"PG4",'2004-07-02',14,NULL,False),
--- (7,6,"PA14",'2004-06-20',12,NULL,False),
-(8,6,"PG21",'2004-06-21',13,NULL,False),
--- (11,6,"PA14",'2004-06-20',12,NULL,False),
-(12,9,"PG21",'2004-11-22',9,"Not bad at all.",False),
-(13,9,"PG36",'2004-11-23',9,"Kitchen too small.",False),
-(14,9,"PG16",'2004-11-23',9,NULL,False),
-(15,24,"PG21",'2004-11-25',11,NULL,False);
+(3,7,"PG36",'2004-07-01','12:00:00',NULL,False),
+(4,9,"PG4",'2004-07-01','12:00:00',"Tidy but too small",False),
+(5,10,"PA14",'2004-07-02','10:00:00',NULL,False),
+(6,12,"PG4",'2004-07-02','14:00:00',NULL,False),
+(7,6,"PA14",'2004-06-20','12:00:00',NULL,False),
+(8,6,"PG21",'2004-06-21','13:00:00',NULL,False),
+(11,6,"PA14",'2004-06-20','12:00:00',NULL,False),
+(12,9,"PG21",'2004-11-22','9:00:00',"Not bad at all.",False),
+(13,9,"PG36",'2004-11-23','9:00:00',"Kitchen too small.",False),
+(14,9,"PG16",'2004-11-23','9:00:00',NULL,False),
+(15,24,"PG21",'2004-11-25','11:00:00',NULL,False);
