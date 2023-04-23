@@ -90,7 +90,7 @@ def bookview():
             logged = True
         else:
             logged = False
-    return render_template('bookview.html',logged=logged,vals=vals,properties=properties)
+    return render_template('Bookview.html',logged=logged,vals=vals,properties=properties)
 
 @app.route('/Rentals', methods=['GET','POST'])
 def rentals():
