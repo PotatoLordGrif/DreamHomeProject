@@ -17,6 +17,7 @@ app.secret_key = "TESTVALUE"
 @app.route('/home', methods=['GET', 'POST'])
 def index():
 #Requires collection of all property image files.
+    mydb.reconnect()
     mycursor = mydb.cursor()
     mycursor.execute(f'SELECT picture FROM propertyforrent')
     myres = mycursor.fetchall()
@@ -62,6 +63,7 @@ def login_post():
 def bookview():
     vals = {}
     properties = []
+    mydb.reconnect()
     mycursor2 = mydb.cursor()
     mycursor2.execute("SELECT propertyNo, street FROM propertyforrent")
     props = mycursor2.fetchall()
@@ -77,6 +79,7 @@ def bookview():
             vals["propno"] = str(request.form["propno"])
             vals["date"] = str(request.form["date"])
             vals["hour"] = str(request.form["hour"] + ":00")
+            mydb.reconnect()
             mycursor = mydb.cursor()
             mycursor.execute('INSERT INTO Viewing(clientNo, propertyNo, viewDate, viewHour) VALUES (%s,%s, %s, %s)',(session['id'],vals["propno"],vals["date"],vals["hour"]))
             mydb.commit()
@@ -99,6 +102,7 @@ def rentals():
     request.close()
     sql = "SELECT p.propertyNo as ID, p.street, p.city, p.postcode, s.fName, s.lName, p.rooms, p.rent, p.propertyType FROM propertyforrent as p INNER JOIN staff as s ON s.staffNo=p.staffNo "
     sql2 = ''
+    mydb.reconnect()
     mycursor = mydb.cursor()
     mycursor.execute(f'SELECT postcode, propertyType FROM propertyforrent')
     myres = mycursor.fetchall()
@@ -168,6 +172,7 @@ def addtomail_post():
             for k,v in vals.items():
                 if v == '':
                     vals[k] = None
+            mydb.reconnect()
             cursor = mydb.cursor()
             cursor.execute("INSERT INTO Client (fName,lName,telNo,street,city,postCode,email,Region,preType,maxRent,joinedOn) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(vals["fName"],vals["lName"],vals["telNo"],vals["addr"],vals["city"],vals["postcode"],vals["email"],vals["region"],vals["rentPref"],vals["maxRent"],date.today()))
             mydb.commit()
@@ -181,6 +186,7 @@ def addtomail_post():
 
 
 def checkLogin(email, postcode):
+    mydb.reconnect()
     mycursor = mydb.cursor()
     mycursor.execute(f'SELECT ID, email, postCode FROM Client WHERE email = "{email}" AND postCode = "{postcode}"')
     myres = mycursor.fetchall()
