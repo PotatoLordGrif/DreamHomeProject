@@ -190,5 +190,5 @@ def checkLogin(email, postcode):
         return myres[0][0]
 
 if __name__ == '__main__':
-    app.run(port=4000,debug=True)
+    app.run(port=80,debug=False)
     
