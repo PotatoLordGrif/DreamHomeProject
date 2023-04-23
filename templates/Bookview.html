@@ -37,6 +37,9 @@
             <li class="nav-item">
               <a href="Rentals" class="nav-link">Rentals</a>
             </li>
+            <li class="nav-item">
+              <a href="signout" class="nav-link">Sign Out</a>
+            </li>
 
           <div class="hamburger">
             <i class="bx bx-menu-alt-left"></i>
@@ -54,27 +57,32 @@
       <div align="center">
           <h1> Book a Viewing <br>
           <div><br></div></h1>
-           <form method="post">
+          {%if not logged%}
+          <p>You aren't logged in...</p>
+          <p>Please click <a href="/Login">Here</a> To log in!</p> 
+          {%else%}
+          <form method="post">
            
              <table id="agentsAdd">
   
-        
-
+             <tr>
+              <td>Property No</td>
+              <td><select name="propno">
+                {%for prop in properties%}
+                <option value={{prop}}> {{prop}} </option>
+                {%endfor%}
+              </select></td>
+            </tr>
+               
+               
                <tr>
-               <td>Enter Name</td>
-               <td> <input id="Name" type="Name" name="name"/> </td>
-               </tr>
-               
-               
-               
-               <tr>
-               <td>Enter Email</td>
-               <td> <input id="email" type="email" name="email"/> </td>
+               <td>Date</td>
+               <td> <input id="date" type="date" name="date" required/> </td>
                </tr>
                
                <tr> 
-               <td>Postcode</td>
-               <td > <input id="postcode" type="postcode" name="number"></input> </td>
+               <td>Hour</td>
+               <td > <input id="hour" type="time" name="hour" required></input> </td>
                </tr>
                
                
@@ -83,12 +91,12 @@
          </table> 
            <div class="boxnewAgent">
            <h1><br></h1>
-      <input  id="buttonSubmit" type="submit" value="  Login  " name="registerNewPerson" /> 
+      <input  id="buttonSubmit" type="submit" value="  Book  " name="registerNewPerson" /> 
       </div>
           </form>
-          <p class="mt-2" > Not a member? <a href= "Register" > Create Account</a> 
           </p>
         </div>
+        {%endif%}
      </section>
      <!-- <nav class ="navbar ">
         <a href=""class="navbar-brand text-light">DreamHome</a>
