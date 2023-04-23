@@ -1,8 +1,6 @@
 from flask import Flask,request,session,render_template,redirect,url_for
 import mysql.connector
 from datetime import date
-import os
-port = os.getenv("PORT")
 #MySQL connection.
 submitted = False
 mydb = mysql.connector.connect(
@@ -192,5 +190,5 @@ def checkLogin(email, postcode):
         return myres[0][0]
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",port=port or 5000)
+    app.run()
     
