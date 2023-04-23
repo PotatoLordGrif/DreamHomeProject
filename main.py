@@ -34,7 +34,7 @@ def login_post():
     #Requires finding email and password, then creation of Session.
     vals["email"] = request.form["email"]
     vals["postcode"] = request.form["postcode"]
-    if session['id']:
+    if 'id' in session:
         error = f'Already logged in! {session["id"]}'
         return render_template('login.html',error=error)
     availUser = checkLogin(vals["email"], vals["postcode"])
@@ -52,13 +52,12 @@ def login_post():
 
 @app.route('/BookView')
 def bookview():
-    #
+    session.pop('id')
     return render_template('bookview.html')
 
 @app.route('/Rentals')
 def rentals():
-
-    return render_template('Rentals.html')
+    return render_template('Rentals.html',session=session)
 
 @app.route('/AddtoMail', methods=['GET'])
 def addtomail():
@@ -113,12 +112,5 @@ def checkLogin(email, postcode):
         return myres[0][0]
 
 if __name__ == '__main__':
-    mycursor = mydb.cursor()
-    mycursor.execute(f'SELECT picture FROM propertyforrent')
-    myres = mycursor.fetchall()
-    images = []
-    for i in myres:
-        images.append(i[0])
-    print(images)
     app.run(port=4000,debug=True)
     

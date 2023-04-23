@@ -47,8 +47,11 @@
       
     </header>
     
-    {{main}}
-
+    {%  if session  %}
+      <p> Logged In </p>
+    {%  else  %}
+      <p> Not Logged In </p>
+    {% endif %}
      </section>
      <!-- <nav class ="navbar ">
         <a href=""class="navbar-brand text-light">DreamHome</a>
