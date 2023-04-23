@@ -1,322 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <h1>Properties For Rent</h1>
-        <p>
-          Search over 2000 properties to rent from the top agents in the country
-        </p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"type="text/css"href="{{url_for('static',filename='css/style.css')}}">
+    <title>Mailing List Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="static/css/loginStyle.css" rel="stylesheet">
+    </head>
+  <body class="bg-nav">
+
+
+    <header class="header" id="header">
+      <div class="navigation">
+        <div class="nav-center container d-flex">
+          <a href="/" class="logo"><h1>DREAM HOME</h1></a>
+
+
+
+
+
+          <ul class="nav-list d-flex">
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="Login" class="nav-link">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="AddtoMail" class="nav-link">Join</a>
+            </li>
+            <li class="nav-item">
+              <a href="BookView" class="nav-link">Book</a>
+            </li>
+            <li class="nav-item">
+              <a href="Rentals" class="nav-link">Rentals</a>
+            </li>
+
+          <div class="hamburger">
+            <i class="bx bx-menu-alt-left"></i>
+          </div>
+        </div>
       </div>
 
-      <div class="rent-center container">
-        <div class="box">
-          <div class="top">
-            <div class="overlay">
-              <img src="static/images/pic2.jpg" alt="" />
-            </div>
-            <div class="pos">
-              <span>FEATURED</span>
-              <span>BUY</span>
-            </div>
-          </div>
-          <div class="bottom">
-            <p>Luxury villa in las vegas</p>
-            <div>
-              <span>$760</span>
-              <span><i class="far fa-eye"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="top">
-            <div class="overlay">
-              <img src="static/images/pic3.jpg" alt="" />
-            </div>
-            <div class="pos">
-              <span>FEATURED</span>
-              <span>BUY</span>
-            </div>
-          </div>
-          <div class="bottom">
-            <p>Luxury villa in California</p>
-            <div>
-              <span>$998</span>
-              <span><i class="far fa-eye"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="top">
-            <div class="overlay">
-              <img src="static/images/pic4.jpg" alt="" />
-            </div>
-            <div class="pos">
-              <span>FEATURED</span>
-              <span>BUY</span>
-            </div>
-          </div>
-          <div class="bottom">
-            <p>Luxury villa in Mackinac island</p>
-            <div>
-              <span>$600</span>
-              <span><i class="far fa-eye"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="top">
-            <div class="overlay">
-              <img src="static/images/pic5.jpg" alt="" />
-            </div>
-            <div class="pos">
-              <span>FEATURED</span>
-              <span>BUY</span>
-            </div>
-          </div>
-          <div class="bottom">
-            <p>Luxury villa in Rochester hills</p>
-            <div>
-              <span>$700</span>
-              <span><i class="far fa-eye"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="top">
-            <div class="overlay">
-              <img src="static/images/pic6.jpg" alt="" />
-            </div>
-            <div class="pos">
-              <span>FEATURED</span>
-              <span>BUY</span>
-            </div>
-          </div>
-          <div class="bottom">
-            <p>Luxury villa in Birmingham</p>
-            <div>
-              <span>$850</span>
-              <span><i class="far fa-eye"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="top">
-            <div class="overlay">
-              <img src="static/images/vert3.jpg" alt="" />
-            </div>
-            <div class="pos">
-              <span>FEATURED</span>
-              <span>BUY</span>
-            </div>
-          </div>
-          <div class="bottom">
-            <p> villa in SanDiago</p>
-            <div>
-              <span>$700</span>
-              <span><i class="far fa-eye"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="top">
-            <div class="overlay">
-              <img src="static/images/vert2.jpg" alt="" />
-            </div>
-            <div class="pos">
-              <span>FEATURED</span>
-              <span>BUY</span>
-            </div>
-          </div>
-          <div class="bottom">
-            <p>Luxury villa in SanDiago</p>
-            <div>
-              <span>$575</span>
-              <span><i class="far fa-eye"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="top">
-            <div class="overlay">
-              <img src="static/images/vert1.jpg"" alt="" />
-            </div>
-            <div class="pos">
-              <span>FEATURED</span>
-              <span>BUY</span>
-            </div>
-          </div>
-          <div class="bottom">
-            <p>Luxury villa in Detroit</p>
-            <div>
-              <span>$700</span>
-              <span><i class="far fa-eye"></i></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      
+      
+    </header>
+    
+    {{main}}
 
-    <!-- Grid -->
-    <section class="section grid-layout">
-      <div class="title">
-        <h1>Popular Properties</h1>
-      </div>
+     </section>
+     <!-- <nav class ="navbar ">
+        <a href=""class="navbar-brand text-light">DreamHome</a>
+    </nav> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+ 
+    
 
-      <div class="wrapper container">
-        <div class="box box1">
-          <img src="static/image/Property1.jpeg" alt="" />
-        </div>
-        <div class="box box2">
-          <img src="static/image/Property2.jpeg" alt="" />
-        </div>
-        <div class="box box3">
-          <img src="static/image/Property3.jpeg" alt="" />
-        </div>
-        <div class="box box4">
-          <img src="static/image/Property4.jpeg" alt="" />
-        </div>
-      </div>
-    </section>
+   <footer>
+    <h1 id="footerStyle" class="text-light display-4 mt-100" style="font-size:80px">  &nbsp &nbsp&nbsp&nbsp Find your Home with the people you trust </h1>
 
-    <!-- Contact -->
-    <section class="section contact">
-      <div class="row">
-        <div class="col">
-          <h2>EXCELLENT SUPPORT</h2>
-          <p>
-            We love our customers and they can reach us any time of day we will
-            be at your service 24/7
-          </p>
-          <a href="" class="btn btn-1">Contact</a>
-        </div>
-        <div class="col">
-          <form action="">
-            <div>
-              <input type="email" placeholder="Email Address" />
-              <a href="">Send</a>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!--  <section class="section rent">
-      <div class="title">
-        <h1>Discover Our Featured Listings</h1>
-        <p>
-          These featured listings contain exclusive real estate opportunities
-          within the city
-        </p>
-      </div>
-
-      <div class="rent-center container">
-        <div class="box">
-          <div class="top">
-            <div class="overlay">
-              <img src="./images/pic2.jpg" alt="" />
-            </div>
-            <div class="pos">
-              <span>FEATURED</span>
-              <span>BUY</span>
-            </div>
-          </div>
-          <div class="bottom">
-            <p>Luxury villa in las vegas</p>
-            <div>
-              <span>$700</span>
-              <span><i class="far fa-eye"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="top">
-            <div class="overlay">
-              <img src="./images/pic4.jpg" alt="" />
-            </div>
-            <div class="pos">
-              <span>FEATURED</span>
-              <span>BUY</span>
-            </div>
-          </div>
-          <div class="bottom">
-            <p>Luxury villa in las vegas</p>
-            <div>
-              <span>$700</span>
-              <span><i class="far fa-eye"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="top">
-            <div class="overlay">
-              <img src="./images/pic5.jpg" alt="" />
-            </div>
-            <div class="pos">
-              <span>FEATURED</span>
-              <span>BUY</span>
-            </div>
-          </div>
-          <div class="bottom">
-            <p>Luxury villa in las vegas</p>
-            <div>
-              <span>$700</span>
-              <span><i class="far fa-eye"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="top">
-            <div class="overlay">
-              <img src="./images/pic1.jpg" alt="" />
-            </div>
-            <div class="pos">
-              <span>FEATURED</span>
-              <span>BUY</span>
-            </div>
-          </div>
-          <div class="bottom">
-            <p>Luxury villa in las vegas</p>
-            <div>
-              <span>$700</span>
-              <span><i class="far fa-eye"></i></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="row">
-        <div class="col d-flex">
-          <h4>INFORMATION</h4>
-          <a href="">About us</a>
-          <a href="">Contact Us</a>
-          <a href="">Term & Conditions</a>
-          <a href="">Shipping Guide</a>
-        </div>
-        <div class="col d-flex">
-          <h4>USEFUL LINK</h4>
-          <a href="">Online Store</a>
-          <a href="">Customer Services</a>
-          <a href="">Promotion</a>
-          <a href="">Top Brands</a>
-        </div>
-        <div class="col d-flex">
-          <span><i class="bx bxl-facebook-square"></i></span>
-          <span><i class="bx bxl-instagram-alt"></i></span>
-          <span><i class="bx bxl-github"></i></span>
-          <span><i class="bx bxl-twitter"></i></span>
-          <span><i class="bx bxl-pinterest"></i></span>
-        </div>
-      </div>
-    </footer>
+   </footer>
   </body>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="static/js/slider.js"></script>
-  <script src="static/js/index.js"></script>
-</html>
-
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+  </html>   

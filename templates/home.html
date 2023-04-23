@@ -64,18 +64,11 @@
       <div class="hero">
         <div class="swiper-container heroslider">
           <div class="swiper-wrapper">
+            {%for i in images%}
             <div class="swiper-slide">
-              <img src="static/images/pic1.jpg" alt="" />
+              <img src="{{url_for('static', filename=i[0])}}" alt="" />
             </div>
-            <div class="swiper-slide">
-              <img src="static/images/pic2.jpg" alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img src="static/image/slide3.jpg" alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img src="static/images/pic2.jpg" alt="" />
-            </div>
+            {%endfor%}
           </div>
           <div class="swiper-button-next">
             <i class="bx bx-chevron-right swiper-icon"></i>
