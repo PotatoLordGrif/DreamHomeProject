@@ -28,16 +28,16 @@
               <a href="Login" class="nav-link">Login</a>
             </li>
             <li class="nav-item">
-              <a href="AddtoMail" class="nav-link">AddtoMail</a>
+              <a href="AddtoMail" class="nav-link">Join</a>
             </li>
             <li class="nav-item">
-              <a href="BookView" class="nav-link">BookView</a>
+              <a href="BookView" class="nav-link">Book</a>
             </li>
             <li class="nav-item">
               <a href="Rentals" class="nav-link">Rentals</a>
             </li>
             <li class="nav-item">
-              <a href="Regional" class="nav-link">Regional</a>
+              <a href="signout" class="nav-link">Sign Out</a>
             </li>
           </ul>
 
@@ -57,18 +57,18 @@
       <div align="center">
           <h1> Login <br>
           <div><br></div></h1>
-           <form action="PersonInfoController" method="post">
-           
+           <form method="post">
+            <p>{{ error }}</p>
              <table id="agentsAdd">
 
                <tr>
-               <td>Enter Email</td>
+               <td>Email</td>
                <td> <input id="email" type="email" name="email"/> </td>
                </tr>
                
                <tr> 
                <td>Postcode</td>
-               <td > <input id="postcode" type="postcode" name="number"></input> </td>
+               <td > <input id="postcode" type="postcode" name="postcode"></input> </td>
                </tr>
 
          </table> 
@@ -77,7 +77,7 @@
       <input  id="buttonSubmit" type="submit" value="  Login  " name="registerNewPerson" /> 
       </div>
           </form>
-          <p class="mt-2" > Not a member? <a href= "Register" > Create Account</a> 
+          <p class="mt-2" > Not a member? <a href= "AddtoMail" > Create Account</a> 
           </p>
         </div>
      </section>

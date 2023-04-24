@@ -23,7 +23,7 @@ CREATE TABLE Staff (
   salary int,
   branchNo varchar(4),
   Telephone varchar(255),
-  Mobile int,
+  Mobile varchar(255),
   Email varchar(255),
   PRIMARY KEY (staffNo),
   FOREIGN KEY (branchNo) REFERENCES Branch(branchNo));
