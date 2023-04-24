@@ -28,7 +28,8 @@ def index():
 
 @app.route('/signout')
 def signout():
-    session.pop('id')
+    if 'id' in session:
+        session.pop('id')
     return redirect(url_for('index'))
 
 @app.route('/Login')
